@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units</title>
+    <link rel="stylesheet" href="css/ex5.css">
+</head>
+<body>
+
+    <header>
+        <h1>CSS Sizing Units in Action</h1>
+        <p class="subtitle">Resize the browser window to watch how each unit reacts!</p>
+    </header>
+
+    <main>
+        <!-- 1. Absolute Units -->
+        <section class="section-card">
+            <h2>1. Absolute: Pixels (px)</h2>
+            <p>Fixed width of <code>300px</code>. It ignores screen size and parent width.</p>
+            <div class="box box-px">width: 300px (Fixed)</div>
+        </section>
+
+        <!-- 2. Relative: Percentage (%) -->
+        <section class="section-card">
+            <h2>2. Relative: Percentage (%)</h2>
+            <p>Calculated relative to its immediate parent. Inside this dashed box (which is 80% wide), this blue bar takes up <strong>50%</strong> of that space.</p>
+            <div class="parent-container">
+                <small>Dashed Parent Container (width: 80%)</small>
+                <div class="box box-percent">width: 50% (of parent)</div>
+            </div>
+        </section>
+
+        <!-- 3. Relative: rem vs em -->
+        <section class="section-card">
+            <h2>3. Relative: Typography (rem vs em)</h2>
+            <p><code>rem</code> looks at the root (<code>&lt;html&gt;</code>, usually 16px). <code>em</code> looks at its direct parent.</p>
+            <div class="box font-root">font-size: 1.25rem (1.25 &times; 16px = 20px)</div>
+            
+            <div class="parent-em-scope">
+                <small>Parent font-size = 20px</small>
+                <div class="box font-em">font-size: 1.5em (1.5 &times; 20px = 30px)</div>
+            </div>
+        </section>
+
+        <!-- 4. Viewport: vw -->
+        <section class="section-card">
+            <h2>4. Viewport Units: (vw)</h2>
+            <p>Tied directly to the browser window. <code>50vw</code> is always exactly 50% of the entire screen width, regardless of what parent container it lives inside.</p>
+            <div class="box box-vw">width: 50vw (50% of Viewport Width)</div>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+main {
+    margin: 0 20px;
+}
+main p {
+    color: red;
+}
+
+main > p {
+    color: greenyellow;
+}
+
+h2 + p {
+    font-weight: 800;
+}
+
+h2 ~ p {
+    text-decoration: line-through;
+}

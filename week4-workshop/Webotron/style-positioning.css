@@ -1,0 +1,136 @@
+/*Layout*/
+
+body{
+  background-color: #000;
+  margin-left:1em;
+}
+
+h1{
+  margin-bottom:0em;
+}
+
+p{
+  padding-bottom:1em;
+}
+
+/*Typography*/
+
+main a{
+  color:#fe0;
+}
+
+body{
+  color:#fff;
+}
+
+code{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1em;
+  font-weight:300;
+}
+
+h1{
+  font-family: 'Finger Paint', sans-serif;
+  font-size:4em;
+}
+
+h2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  font-weight:400;
+}
+
+p{
+  font-family: 'Roboto Slab', sans-serif;
+  font-size:1.25em;
+  font-weight:400;
+}
+
+
+
+/*Specific styles*/
+
+/*Webotron the Friendly Bot parts*/
+
+/*All images CC-BY Mozilla Learning Networks, https://teach.mozilla.org*/
+
+#webotron{
+  margin: 40px auto;
+  position: relative;
+  width: 480px;
+  height: 620px;
+}
+
+#head{
+  background-image:url('webotron-head.png');
+  background-repeat:no-repeat;
+  position: absolute;
+  left: 92px;
+  z-index: 6;
+  height:200px;
+  width:200px;
+
+}
+
+#armOne{
+  background-image:url('webotron-arm-1.png');
+  position: absolute;
+  top: 205px;
+  left:85px;
+  height:200px;
+  width:50px;
+}
+
+#body {
+  background-image:url('webotron-body.png');
+  position:absolute;
+  top:200px;
+  z-index:5px;
+  left:140px;
+  height:200px;
+  width:100px;	
+}
+
+#armTwo{
+  background-image:url('webotron-arm-2.png');
+  position:absolute;
+  top: 205px;
+  left:245px;
+  z-index:8;
+  height:200px;
+  width:50px;	
+}
+
+#legOne{
+  background-image:url('webotron-leg-1.png');
+  position:absolute;
+  top: 398px;
+  left: 85px;
+  z-index:2;
+  height:200px;
+  width:100px;
+}
+
+#legTwo{
+  background-image:url('webotron-leg-2.png');
+  position:absolute;
+  top:398px;
+  left:195px;
+  z-index:2;
+  height:200px;
+  width:100px;
+}
+
+/*License*/
+
+#license{
+  clear:both;
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  font-size:.75em;
+  padding-top:2em;
+}
+
+#license a{
+  color:#fff;
+}

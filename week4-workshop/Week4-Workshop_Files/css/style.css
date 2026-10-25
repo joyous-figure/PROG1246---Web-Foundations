@@ -1,0 +1,129 @@
+/* Base Page Setup */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fdfaf6;
+    color: #2b1d0c;
+    width: 900px;
+    margin: 20px auto;
+    border: 2px solid #8c3b1e;
+    padding: 15px;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #8c3b1e;
+    padding-bottom: 10px;
+}
+
+header h1 {
+    color: #8c3b1e;
+    margin: 0;
+}
+
+nav {
+    background-color: #f5e6d3;
+    text-align: center;
+    padding: 10px 0;
+    margin: 15px 0;
+}
+
+nav a {
+    color: #5c2410;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 15px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.herotext {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left:0px;
+    right:0px;
+    background-color: rgba(92,36,16, 0.65);
+    padding:20px;
+    color:#fff;
+}
+
+.herotext h2 {
+    color: #fff;
+    margin-top: 15px;
+}
+
+.shopbutton {
+    background-color: rgb(154, 25, 8);
+    color:#fff;
+    display: inline-block;
+    width: 160px;
+    padding: 10px;
+    border: 2px solid;
+    text-decoration: none;
+    font-weight:bold;
+    margin-top: 10px;
+
+}
+
+main {
+    width: 580px;
+    float: left;
+}
+
+main img {
+    width: 100%;
+    display: block;
+}
+
+aside {
+    width: 280px;
+    float: right;
+    background-color: #faede1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+aside h3 {
+    margin-top: 0;
+    color: #8c3b1e;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    border-top: 2px solid #8c3b1e;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+@media only screen and (max-width: 787px) {
+    body {
+        padding: 2%;
+        width: 94%;
+    }
+
+    nav a {
+        padding: 0 20px
+    }
+
+    main {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+
+    }
+    .shopbutton {
+        font-size: 18px;
+        padding: 5px;
+    }
+    .herotext h2 {
+        margin: 5px 0;
+
+    }
+};

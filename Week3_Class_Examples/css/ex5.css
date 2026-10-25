@@ -1,0 +1,91 @@
+/* Base page styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f9fc;
+    color: #222;
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.5;
+}
+
+h1 {
+    color: #004085;
+    margin-bottom: 0.5rem;
+}
+
+p.subtitle {
+    margin-top: 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+.section-card {
+    background: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.3rem;
+}
+
+/* Unit Demonstration Boxes */
+.box {
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: monospace;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 1. Absolute px */
+.box-px {
+    width: 300px;
+    background-color: #d9534f; /* Red */
+}
+
+/* 2. Relative % */
+.parent-container {
+    background-color: #e9ecef;
+    border: 2px dashed #6c757d;
+    padding: 1rem;
+    width: 80%;
+    margin-top: 0.5rem;
+}
+
+.box-percent {
+    width: 50%;
+    background-color: #0275d8; /* Blue */
+}
+
+/* 3. Relative rem vs em */
+.font-root {
+    font-size: 1.25rem; /* 1.25 * 16px = 20px */
+    background-color: #5cb85c; /* Green */
+}
+
+.parent-em-scope {
+    font-size: 20px; /* Parent sets a base */
+    margin-top: 0.5rem;
+}
+
+.font-em {
+    font-size: 1.5em; /* 1.5 * 20px = 30px */
+    background-color: #f0ad4e; /* Amber */
+}
+
+/* 4. Viewport vw */
+.box-vw {
+    width: 50vw; /* Exactly half of screen width */
+    background-color: #6f42c1; /* Purple */
+}

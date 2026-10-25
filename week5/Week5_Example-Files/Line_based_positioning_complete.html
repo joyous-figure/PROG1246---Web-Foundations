@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    The code in this example is adapted from Andrew, R. (2016, October 07). Grid by Example: Line-based Positioning [Video]. YouTube. https://www.youtube.com/watch?v=t8GRS-Z3YVI
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defining a Grid</title>
+    <style>
+        .grid{
+             display: grid;
+             grid-template-columns: repeat(4, 1fr);
+             grid-template-rows: repeat(3, 200px);
+             grid-gap: 20px;
+        }
+
+        .grid div:nth-child(1){
+            grid-column-start: 1; /* start at the line 1, which is the beginning */
+            grid-column-end: -1; /* end at line -1, which is all across the grid */
+        }
+        
+        .grid div:nth-child(2){
+            grid-column: 1; /* no need to add the end line as the default is span 1 grid line*/
+            grid-row: 2; 
+        }
+
+        .grid div:nth-child(3){
+            /* grid-column: 2 / 4; */ /* shorthand for grid-column-start and grid-column-end */
+            grid-column: 2 / span 2; /* spand 2 grid lines */
+        }
+
+        .grid div:nth-child(4){
+            grid-column: 3 / 5; /* shorthand for grid-column-start and grid-column-end */
+        }
+
+        /* The following is just some basic CSS to create boxes */
+        .grid div{
+            border: 1px solid rgb(0, 95,105);
+            border-radius: 3px;
+            background-color: rgba(0,95,107, 0.8);
+            padding: 0.2em 2em;
+            color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        .grid div:nth-child(odd){
+            border: 1px solid rgb(0,180,204);
+            background-color: rgba(0,180,204, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

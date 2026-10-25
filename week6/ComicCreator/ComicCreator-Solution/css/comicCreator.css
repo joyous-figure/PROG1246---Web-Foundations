@@ -1,0 +1,163 @@
+body {
+    background-color: #2b2b2b;
+}
+
+#page {
+    height: 100%;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#titleblock {
+    height: 160px;
+    width: 780px;
+    padding-left: 10px;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h1, h2 {
+   font-family: "Comic Sans MS";
+   font-style: italic;
+   font-weight: 900; 
+   color: white;
+}
+
+.narration {
+    font-family: "Comic Sans MS";
+    font-style: italic;
+    font-weight: 900;
+    font-size: 15px;
+    padding: 15px;
+    color: white;
+    margin: 10px;
+    background-color: #2b2b2b;
+}
+
+.bigtext {
+    font-family: "Comic Sans MS";
+    font-style: italic;
+    font-weight: 900;
+    font-size: 30px;
+    color: white;
+    line-height: 100%;
+    margin: 20px;
+    text-shadow: 2px 2px #2b2b2b;
+}
+
+.left {
+    position: absolute;
+    left: 30px;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+}
+
+.top {
+    position: absolute;
+    top: 0;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.inback {
+    z-index: 1;
+}
+
+.inmiddle {
+    z-index: 2;
+}
+
+.infront {
+    z-index: 3;
+}
+
+#image1 {
+    position: absolute;
+    width: 100%;
+    top: -50px
+}
+
+#image2 {
+    position: absolute;
+    height: 100%;
+}
+
+#image3 {
+    position: absolute;
+    width: 100%;
+}
+
+#image4 {
+    position: absolute;
+    width: 120%;
+    top: -90px;
+}
+
+#image5 {
+    position: absolute;
+    height: 100%;
+    left: -30px;
+}
+
+#panel1 {
+    position:relative;
+    height: 280px;
+    width: 780px;
+    border:10px solid #2b2b2b;
+    float: left;
+    background-color: white;
+    overflow: hidden;
+}
+
+#panel2 {
+    position: relative;
+    height: 280px;
+    width: 280px;
+    border: 10px solid #2b2b2b;
+    float: left;
+    background-color: white;
+    overflow: hidden;
+}
+
+#panel3 {
+    position: relative;
+    height: 280px;
+    width: 480px;
+    border: 10px solid #2b2b2b;
+    float: left;
+    background-color: white;
+    overflow: hidden;
+}
+
+#panel4 {
+    position: relative;
+    height: 280px;
+    width: 480px;
+    border: 10px solid #2b2b2b;
+    float: left;
+    background-color: white;
+    overflow: hidden;
+}
+
+#panel5 {
+    position: relative;
+    height: 280px;
+    width: 280px;
+    border: 10px solid #2b2b2b;
+    float: left;
+    background-color: white;
+    overflow: hidden;
+}

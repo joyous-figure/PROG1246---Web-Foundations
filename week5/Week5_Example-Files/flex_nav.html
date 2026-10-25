@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Navigation Demo</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.5;
+        }
+
+        h2 {
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        p.desc {
+            margin-top: 0;
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* Base nav bar container */
+        .navbar {
+            background-color: #1e293b;
+            border-radius: 8px;
+            padding: 0.75rem 1.25rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .brand {
+            color: #38bdf8;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        /* Unordered list reset */
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: #f8fafc;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #334155;
+            color: #38bdf8;
+        }
+
+        .btn-cta {
+            background-color: #0284c7 !important;
+            color: #ffffff !important;
+        }
+
+        .btn-cta:hover {
+            background-color: #0369a1 !important;
+        }
+
+        /* MODERN STANDARD: SPACE-BETWEEN
+           Brand pushed left, menu links grouped right. */
+        .nav-standard {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-standard .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* SPLIT NAV: AUTO MARGIN TRICK
+           Everything sits in one list; margin-left: auto pushes
+           items to the far right without extra containers. */
+        .nav-split {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-split .push-right {
+            margin-left: auto; /* The Flexbox push trick */
+        }
+
+        /* MOBILE RESPONSIVE NAV
+           Switches from row to column on small viewports. */
+        .nav-responsive {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-responsive .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        @media (max-width: 650px) {
+            .nav-responsive {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .nav-responsive .nav-links {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.5rem;
+            }
+
+            .nav-responsive .nav-links a {
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Why Flexbox is Built for Navigation</h1>
+
+    <!-- Example 1: Standard Space-Between -->
+    <h2>1. The Classic Brand + Links Pattern</h2>
+    <p class="desc"><code>justify-content: space-between;</code> pushes the brand to the far left and the links to the far right with zero manual margins or float clears.</p>
+
+    <nav class="navbar nav-standard">
+        <a href="#" class="brand">My Web Store</a>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" class="btn-cta">Sign In</a></li>
+        </ul>
+    </nav>
+
+    <!-- Example 2: The Auto Margin Push -->
+    <h2>2. The <code>margin-left: auto;</code> Alignment Trick</h2>
+    <p class="desc">A single flat list where one item uses <code>margin-left: auto</code> to absorb all leftover space along the main axis, sending subsequent items to the far right.</p>
+
+    <nav class="navbar">
+        <ul class="nav-links nav-split">
+            <li><a href="#" class="brand">BrandLogo</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li class="push-right"><a href="#">Support</a></li>
+            <li><a href="#" class="btn-cta">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- Example 3: Direction Reversal on Mobile -->
+    <h2>3. Instant Responsive Collapse</h2>
+    <p class="desc">Resize your browser window under <strong>650px</strong> to see the main axis pivot from <code>row</code> to <code>column</code>.</p>
+
+    <nav class="navbar nav-responsive">
+        <a href="#" class="brand">ResponsiveNav</a>
+        <ul class="nav-links">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#" class="btn-cta">Get Started</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

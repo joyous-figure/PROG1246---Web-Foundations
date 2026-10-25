@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Colours Demo</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/ex6.css">
+</head>
+<body>
+
+    <header>
+        <h1>7 Ways to Define Colours in CSS</h1>
+        <p class="subtitle">Hover over any color value in VS Code to open the interactive color picker!</p>
+    </header>
+
+    <main class="color-grid">
+        <!-- 1. Named -->
+        <section class="card">
+            <h2>1. Named Colour</h2>
+            <code>background-color: crimson;</code>
+            <div class="swatch c-named">Solid</div>
+        </section>
+
+        <!-- 2. 6-Digit Hex -->
+        <section class="card">
+            <h2>2. 6-Digit Hex (#RRGGBB)</h2>
+            <code>background-color: #0056b3;</code>
+            <div class="swatch c-hex6">Solid</div>
+        </section>
+
+        <!-- 3. 3-Digit Hex -->
+        <section class="card">
+            <h2>3. 3-Digit Hex (#RGB)</h2>
+            <code>background-color: #f60; /* #ff6600 */</code>
+            <div class="swatch c-hex3">Solid</div>
+        </section>
+
+        <!-- 4. RGB -->
+        <section class="card">
+            <h2>4. RGB Method</h2>
+            <code>background-color: rgb(40, 167, 69);</code>
+            <div class="swatch c-rgb">Solid</div>
+        </section>
+
+        <!-- 5. RGBA -->
+        <section class="card">
+            <h2>5. RGBA (with Alpha)</h2>
+            <code>background-color: rgba(40, 167, 69, 0.5);</code>
+            <div class="checker-bg">
+                <div class="swatch c-rgba">50% Transparent</div>
+            </div>
+        </section>
+
+        <!-- 6. HSL -->
+        <section class="card">
+            <h2>6. HSL Method</h2>
+            <code>background-color: hsl(280, 70%, 50%);</code>
+            <div class="swatch c-hsl">Solid</div>
+        </section>
+
+        <!-- 7. HSLA -->
+        <section class="card">
+            <h2>7. HSLA (with Alpha)</h2>
+            <code>background-color: hsla(280, 70%, 50%, 0.5);</code>
+            <div class="checker-bg">
+                <div class="swatch c-hsla">50% Transparent</div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

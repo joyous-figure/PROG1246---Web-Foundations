@@ -1,0 +1,65 @@
+body{
+    width: 1300px;
+    border: 2px solid black;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+main {
+    width: 800px;
+    float: left;
+    color: rgb(0, 255, 0)
+}
+
+aside{
+    width:300px;
+    float: right;
+    padding-left: 20px;
+    color: rgb(0, 255, 0);
+}
+
+aside li:nth-child(odd){
+    color: white;
+    background-color:#95009f;
+}
+
+header{
+    text-align: center;
+}
+
+h1{
+    color: rgb(0, 255, 0);
+    font-family:'Times New Roman', Times, serif;
+}
+
+nav{
+    border: white;
+    margin: 20px;
+    background-color:#95009f;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+nav a{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 0 30px;
+}
+
+img{
+    width: 100%;
+}
+
+footer{
+    clear: both;
+    text-align: center;
+    font-weight: bold;
+    background-color: #95009f;
+    padding:20px 0;
+    font-size: 20px;
+}

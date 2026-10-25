@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backgrounds, Overflow & Media Query Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s ease;
+        }
+
+        .box {
+            height: 120px;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+
+        .color-box {
+            background-color: thistle;
+            color: #333;
+            text-shadow: none;
+        }
+
+        .gradient-box {
+            background-image: linear-gradient(90deg, #ff7e5f, #feb47b);
+        }
+
+        .img-repeat {
+            background-image: url('images/tile.png');
+            background-repeat: repeat;
+        }
+
+        .img-cover {
+            background-image: url('images/apple.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .overflow-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .overflow-box {
+            flex: 1;
+            height: 100px;
+            border: 2px solid #d9534f;
+            background-color: #ffffff;
+            color: #333;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .of-visible { overflow: visible; }
+        .of-hidden  { overflow: hidden; }
+        .of-scroll  { overflow: scroll; }
+        .of-auto    { overflow: auto; }
+
+        .device-indicator {
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            background-color: #0d6efd;
+            color: white;
+        }
+
+        .device-indicator::after {
+            content: " — SCREEN >= 601px (Desktop/Tablet Mode)";
+        }
+
+
+        @media (max-width: 600px) {
+            /* Styles for screens 600px and below */
+            body {
+                background-color: hotpink; /* Soft red tint on mobile */
+            }
+
+            .device-indicator {
+                background-color: #dc3545; /* Turns Red */
+            }
+
+            .device-indicator::after {
+                content: " — SCREEN <= 600px (Mobile Mode)";
+            }
+
+            /* Stack the horizontal overflow test boxes vertically */
+            .overflow-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>1. Backgrounds</h2>
+    <div class="box color-box">Solid Color: <code>background-color: thistle;</code></div>
+    <div class="box gradient-box">Gradient: <code>linear-gradient(90deg, #ff7e5f, #feb47b);</code></div>
+    <div class="box img-repeat">Background Image (Repeat): <code>url('apple.jpg');</code></div>
+    <div class="box img-cover">Background Image (Cover): <code>background-size: cover;</code></div>
+
+    <hr>
+
+    <h2>2. Overflow (Fixed height: 100px)</h2>
+    <div class="overflow-container">
+        <div class="overflow-box of-visible"><strong>visible:</strong> Spills past borders - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div class="overflow-box of-hidden"><strong>hidden:</strong> Clips content clean - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div class="overflow-box of-scroll"><strong>scroll:</strong> Forced bars - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div class="overflow-box of-auto"><strong>auto:</strong> Adaptive scrollbars - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    </div>
+
+    <hr>
+
+    <h2>3. Media Query Test (Breakpoint: 600px)</h2>
+    <div class="device-indicator">Current Layout</div>
+
+</body>
+</html>
